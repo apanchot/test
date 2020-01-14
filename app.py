@@ -118,7 +118,7 @@ cities_coordinates = pd.read_csv('./data/worldcities.csv')
 cities_visitors = pd.read_csv('./data/wiki_international_visitors.csv')
 
 #Importing a dataframe with average hotel prices by city
-hotel_prices = pd.read_excel('./data/average_hotel_prices.xlsx')
+hotel_prices = pd.read_csv('./data/average_hotel_prices.csv')
 
 #################### Function to calculate the distance between cities ####################
 
