@@ -1,3 +1,3 @@
 # Deploying your Dash app online
 
-Enjoy at https://novadatavisproject.herokuapp.com
+Enjoy at https://dashexample.herokuapp.com/
