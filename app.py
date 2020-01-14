@@ -5,19 +5,7 @@ from dash.dependencies import Input, Output, State
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
-from math import sin, cos, sqrt, atan2, radians
-# from ga import (
-#     initial,
-#     fitness_aux,
-#     fitness_function,
-#     tournament_selection,
-#     select_parents,
-#     order_crossover,
-#     inversion_mutation,
-#     elitism_replacement,
-#     save_best_fitness,
-#     ga_search
-# )
+#from math import sin, cos, sqrt, atan2, radians
 
 
 
@@ -141,16 +129,16 @@ hotel_prices = pd.read_excel('./data/average_hotel_prices.xlsx')
 def distance(x, y):
     R = 6373.0
     
-    lat1 = radians(selected_cities.loc[x,'lat'])
-    lon1 = radians(selected_cities.loc[x,'lng'])
-    lat2 = radians(selected_cities.loc[y,'lat'])
-    lon2 = radians(selected_cities.loc[y,'lng'])
+    lat1 = np.radians(selected_cities.loc[x,'lat'])
+    lon1 = np.radians(selected_cities.loc[x,'lng'])
+    lat2 = np.radians(selected_cities.loc[y,'lat'])
+    lon2 = np.radians(selected_cities.loc[y,'lng'])
     
     dlon = lon2 - lon1
     dlat = lat2 - lat1
     
-    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
-    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    a = np.sin(dlat / 2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2)**2
+    c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
     
     distance = R * c
     
