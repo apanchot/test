@@ -43,8 +43,8 @@ def distance(x, y):
     dlon = lon2 - lon1
     dlat = lat2 - lat1
     
-    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
-    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    a = np.sin(dlat / 2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2)**2
+    c = 2 * np.atan2(np.sqrt(a), np.sqrt(1 - a))
     
     distance = R * c
     
